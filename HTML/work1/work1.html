@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work1</title>
+    <script>
+        var index = 1;
+
+        function clickleft() {
+            var element = document.getElementsByTagName("img")[0];
+            element.src = "../../img/z_1_attack_0"+index+".png";
+            index = index - 1;
+            if (index == 1){
+                    index = 9;
+            }
+        }
+        function clickright() {
+            var element = document.getElementsByTagName("img")[0];
+            element.src = "../../img/z_1_attack_0"+index+".png";
+            index = index +1;
+            if (index == 9){
+                index = 1;
+            }
+        }
+    </script>
+</head>
+<body >
+<img src="../../img/z_1_attack_01.png" height="130" width="90"/>
+<button onclick="clickleft()">上一张</button>
+<button onclick="clickright()">下一张</button>
+</body>
+</html>
