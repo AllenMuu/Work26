@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>work2</title>
-</head>
-<body>
+    <style>
+        div{
+            margin: 0px auto;
+            border: 1px solid wheat;
+            width: 550px;
+            height: 550px;
+            position: relative;
 
+        }
+        button{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    </style>
+    <script>
+        function doshow() {
+            setTimeout("apperence()",3000);
+        }
+        function apperence() {
+            document.getElementById('div1').style.display="none";
+        }
+    </script>
+</head>
+<body onload="doshow">
+<div id="div1">
+    <button onmouseover="mover()" name="bo">关闭</button>
+    <img src="../../img/01.jpg" height="500" width="500"/>
+</div>
 </body>
 </html>

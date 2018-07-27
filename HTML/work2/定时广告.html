@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            /*border: 1px solid red ;*/
+            width: 500px;
+            height: 450px;
+            position: relative;
+            margin: 0 auto;
+            /*display: none;*/
+        }
+
+        .but {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    </style>
+    <script>
+        var yr;
+
+        var yu;
+        function haha() {
+            // var vi = document.getElementById("d");
+            // vi.style.display = "none";
+            document.getElementsByTagName("img")[0].style.visibility = "hidden";
+            document.getElementsByClassName("but")[0].style.visibility="hidden";
+            yu = setTimeout("pic()",5000);
+
+        }
+
+
+
+        function pic() {
+
+            // var vi = document.getElementById("d");
+            // vi.style.display = "block";
+          var picture= document.getElementsByTagName("img")[0];
+            picture.style.visibility="visible";
+            var button= document.getElementsByClassName("but")[0];
+            button.style.visibility="visible";
+            yr = setTimeout("hid()",3000);
+
+        }
+        function hid() {
+            // var vi = document.getElementById("d");
+            // vi.style.display = "none";
+            var picture= document.getElementsByTagName("img")[0];
+            picture.style.visibility="hidden";
+            var button= document.getElementsByClassName("but")[0];
+            button.style.visibility="hidden";
+            yu = setTimeout("pic()",5000);
+
+        }
+
+        function come(){
+
+            yu = setTimeout("pic()",5000);
+            // yr = setTimeout("hid()",3000);
+
+        }
+
+
+
+
+
+    </script>
+</head>
+<body  style="" onload="come()" >
+
+<div id="d" >
+
+    <!--<button   class="but" onmouseover="haha()">-->
+        <!--关闭-->
+    <!--</button>-->
+    <!--<img  src="../img/5.jpg" height="500" width="500"/>-->
+
+    <button style="visibility: hidden"  class="but" onmouseover="haha()">
+        关闭
+    </button>
+    <img  style="visibility: hidden" src="../img/5.jpg" height="500" width="500"/>
+</div>
+
+</body>
+</html>

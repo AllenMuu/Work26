@@ -12,6 +12,9 @@
     </style>
     <script>
         function create(){
+            var c1=document.getElementById("a").value;
+
+            var c2=document.getElementById("b").value;
             //获取行数值
             var line=document.getElementById("rows").value;
             //获取列数值
@@ -27,25 +30,24 @@
                 document.write("</tr>");
             }
             document.write("</table>");
-            var c1=document.getElementById(a).value;
-            var c2=document.getElementById(b).value;
-            console.
+
+
             var tab = document.getElementById("tab");
             //-- 2.获取所有的行
             var rows = tab.rows;
             //-- 3.循环遍历
             for (var i = 0 ; i < rows.length ; i++){
                 if (i % 2 == 0){
-                    rows[i].bgColor ="c1";
+                    rows[i].bgColor =c1;
                 }else{
-                    rows[i].bgColor ="c2";
+                    rows[i].bgColor =c2;
                 }
             }
         }
 
     </script>
 </head>
-<body onload="getcolor()">
+<body>
 奇数颜色<input type="color" id="a">　<br>
 偶数颜色<input type="color" id="b">　<br>
 表格行数<input type="text" id="rows">   <br>
